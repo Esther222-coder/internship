@@ -30,7 +30,7 @@ classdata = x.find("div", class_="section subheading")
 print(classdata)
 
 # -------- PART 3 : Example.com --------
-res = requests.get("https://example.com")
+res = requests.get("https://example.com", verify=False)
 soup = BeautifulSoup(res.content, "html.parser")
 
 print(soup.title)
